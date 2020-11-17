@@ -1,18 +1,21 @@
 <html>
 
 <head>
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> GSO-Mitfahrer-DB </title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
+    <link href="main.css" rel="stylesheet">
 
 </head>
 
 <body>
     <div class="container">
-        <h1> Mitfahrer DB </h1>
+        <h1 class="mt-3 mb-3"> Mitfahrer DB </h1>
 
-        <div class="accordion" id="accordionExample">
+        <div class="accordion mb-3" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -31,67 +34,67 @@
                                         <span class="mr-2"> Tag: </span>
 
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Monday">
-                                            <label class="form-check-label" for="Monday">
+                                            <input class="form-check-input" type="radio" name="Day" id="CreateMonday">
+                                            <label class="form-check-label" for="CreateMonday">
                                                 Montag
                                             </label>
                                         </div>
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Tuesday">
-                                            <label class="form-check-label" for="Tuesday">
+                                            <input class="form-check-input" type="radio" name="Day" id="CreateTuesday">
+                                            <label class="form-check-label" for="CreateTuesday">
                                                 Dienstag
                                             </label>
                                         </div>
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Wednesday">
-                                            <label class="form-check-label" for="Wednesday">
+                                            <input class="form-check-input" type="radio" name="Day" id="CreateWednesday">
+                                            <label class="form-check-label" for="CreateWednesday">
                                                 Mittwoch
                                             </label>
                                         </div>
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Thursday">
-                                            <label class="form-check-label" for="Thursday">
+                                            <input class="form-check-input" type="radio" name="Day" id="CreateThursday">
+                                            <label class="form-check-label" for="CreateThursday">
                                                 Donnerstag
                                             </label>
                                         </div>
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Friday">
-                                            <label class="form-check-label" for="Friday">
+                                            <input class="form-check-input" type="radio" name="Day" id="CreateFriday">
+                                            <label class="form-check-label" for="CreateFriday">
                                                 Freitag
                                             </label>
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6 mb-3">
 
                                         <span class="mr-2"> Maximale Anzahl an Mitfahrern: </span>
 
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="1">
+                                            <input class="form-check-input" type="radio" name="Nr" id="1">
                                             <label class="form-check-label" for="1">
                                                 1
                                             </label>
                                         </div>
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="2">
+                                            <input class="form-check-input" type="radio" name="Nr" id="2">
                                             <label class="form-check-label" for="2">
                                                 2
                                             </label>
                                         </div>
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="3">
+                                            <input class="form-check-input" type="radio" name="Nr" id="3">
                                             <label class="form-check-label" for="3">
                                                 3
                                             </label>
                                         </div>
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="4">
+                                            <input class="form-check-input" type="radio" name="Nr" id="4">
                                             <label class="form-check-label" for="4">
                                                 4
                                             </label>
                                         </div>
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="5">
+                                            <input class="form-check-input" type="radio" name="Nr" id="5">
                                             <label class="form-check-label" for="5">
                                                 5
                                             </label>
@@ -102,25 +105,83 @@
 
                                 <div class="row">
 
-                                    <div class="col-lg-2 col-sm-4 mb-3">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="RaucherAuto">
-                                            <label class="form-check-label" for="RaucherAuto">RaucherAuto</label>
+                                    <div class="col-lg-3 col-sm-6 mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text">Ziel PLZ</span>
+                                            <input type="text" class="form-control" aria-label="PLZ">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-sm-6 mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text">Kosten</span>
+                                            <input type="text" class="form-control" aria-label="Price">
+                                            <span class="input-group-text">€</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 mb-3">
+                                        <div class="input-group">
+                                            <label class="input-group-text" for="Uhrzeit">Uhrzeit:</label>
+                                            <select class="form-select" id="Uhrzeit" aria-label="Default select example">
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="12:00">12:00</option>
+                                                <option value="12:15">12:15</option>
+                                                <option value="12:30">12:30</option>
+                                                <option value="12:45">12:45</option>
+                                                <option value="13:00">13:00</option>
+                                                <option value="13:15">13:15</option>
+                                                <option value="13:30">13:30</option>
+                                                <option value="13:45">13:45</option>
+                                                <option value="14:00">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                            </select>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-2 col-sm-4 mb-3">
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="Gepäck">
-                                            <label class="form-check-label" for="Gepäck">Gep&auml;ck</label>
+                                            <input class="form-check-input" type="checkbox" id="CreateFahrt">
+                                            <label class="form-check-label" for="CreateFahrt">An- oder Abfahrt</label>
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-2 col-sm-4 mb-3">
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-lg-3 col-sm-6 mb-3">
                                         <div class="form-check-inline">
                                             <input class="form-check-input" type="checkbox" value="" id="Männer">
                                             <label class="form-check-label" for="Männer">
-                                                M&auml;nner
+                                                Männer
                                             </label>
                                         </div>
                                         <div class="form-check-inline">
@@ -131,51 +192,46 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-6 mb-3">
-                                        <div class="input-group">
-                                            <span class="input-group-text">Kosten f&uuml;r die Mitnahme</span>
-                                            <input type="text" class="form-control" aria-label="Price">
-                                            <span class="input-group-text">&#8364;</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="row">
-
-                                    <div class="col-lg-3 col-md-6 mb-3">
-                                        <div class="input-group">
-                                            <label class="input-group-text" for="Uhrzeit">Ankunftzeit bis:</label>
-                                            <select class="form-select" id="Uhrzeit" aria-label="Default select example">
-                                                <option value="07:45">07:45</option>
-                                                <option value="09:35">09:35</option>
-                                                <option value="11:25">11:25</option>
-                                                <option value="13:15">13:15</option>
-                                                <option value="15:05">15:05</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-3 col-md-6 mb-3">
+                                    <div class="col-lg-3 col-sm-4 mb-3">
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="WiederkehrendeFahrt">
-                                            <label class="form-check-label" for="WiederkehrendeFahrt">Wiederkehrende Fahrt</label>
+                                            <input class="form-check-input" type="checkbox" id="RaucherAuto">
+                                            <label class="form-check-label" for="RaucherAuto">RaucherAuto</label>
                                         </div>
                                     </div>
 
+                                    <div class="col-lg-3 col-sm-6 mb-3">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="Gepäck">
+                                            <label class="form-check-label" for="Gepäck">Gepäck</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-sm-6 mb-3">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="CreateTiere">
+                                            <label class="form-check-label" for="CreateTiere">Tiere</label>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="row">
-
-                                    <div> <button type="submit" class="btn btn-primary"> Erstellen </button> </div>
-
+                                <div class="col-lg-6 col-sm-6 mb-3">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
+                                        <label for="floatingTextarea2">Beschreibung</label>
+                                    </div>
                                 </div>
 
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button type="submit" class="btn btn-primary"> Erstellen </button>
+                                </div>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+
+            <!-- Search -->
+
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -185,19 +241,216 @@
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                     <div class="accordion-body">
 
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="button" class="btn btn-primary inactive" id="filterButton">Filter</button>
+                        </div>
+
+                        <div id="FilterContainer">
+                            <div class="row">
+                                <div class="col-lg-6 mb-3">
+
+                                    <span class="mr-2"> Tag: </span>
+
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="Day" id="SearchMonday">
+                                        <label class="form-check-label" for="SearchMonday">
+                                            Montag
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="Day" id="SearchTuesday">
+                                        <label class="form-check-label" for="SearchTuesday">
+                                            Dienstag
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="Day" id="SearchWednesday">
+                                        <label class="form-check-label" for="SearchWednesday">
+                                            Mittwoch
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="Day" id="SearchThursday">
+                                        <label class="form-check-label" for="SearchThursday">
+                                            Donnerstag
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="Day" id="SearchFriday">
+                                        <label class="form-check-label" for="SearchFriday">
+                                            Freitag
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+
+                                <div class="col-lg-6 mb-3">
+                                    <div class="input-group">
+                                        <span class="input-group-text">PLZ des Fahrers</span>
+                                        <input type="text" class="form-control" aria-label="PLZ">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 mb-3">
+                                    <div class="input-group">
+                                        <label class="input-group-text" for="Uhrzeit">Uhrzeit:</label>
+                                        <select class="form-select" id="SearchUhrzeit" aria-label="Default select example">
+                                            <option value="07:45">07:45</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="08:15">08:15</option>
+                                            <option value="08:30">08:30</option>
+                                            <option value="08:45">08:45</option>
+                                            <option value="09:00">09:00</option>
+                                            <option value="09:15">09:15</option>
+                                            <option value="09:30">09:30</option>
+                                            <option value="09:45">09:45</option>
+                                            <option value="10:00">10:00</option>
+                                            <option value="10:15">10:15</option>
+                                            <option value="10:30">10:30</option>
+                                            <option value="10:45">10:45</option>
+                                            <option value="11:00">11:00</option>
+                                            <option value="11:15">11:15</option>
+                                            <option value="11:30">11:30</option>
+                                            <option value="11:45">11:45</option>
+                                            <option value="12:00">12:00</option>
+                                            <option value="12:15">12:15</option>
+                                            <option value="12:30">12:30</option>
+                                            <option value="12:45">12:45</option>
+                                            <option value="13:00">13:00</option>
+                                            <option value="13:15">13:15</option>
+                                            <option value="13:30">13:30</option>
+                                            <option value="13:45">13:45</option>
+                                            <option value="14:00">14:00</option>
+                                            <option value="14:15">14:15</option>
+                                            <option value="14:30">14:30</option>
+                                            <option value="14:45">14:45</option>
+                                            <option value="15:00">15:00</option>
+                                            <option value="15:15">15:15</option>
+                                            <option value="15:30">15:30</option>
+                                            <option value="15:45">15:45</option>
+                                            <option value="16:00">16:00</option>
+                                            <option value="16:15">16:15</option>
+                                            <option value="16:30">16:30</option>
+                                            <option value="16:45">16:45</option>
+                                            <option value="17:00">17:00</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+
+                                <div class="col-lg-3 col-sm-6 mb-3">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="CreateRaucherAuto">
+                                        <label class="form-check-label" for="CreateRaucherAuto">RaucherAuto</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 mb-3">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="CreateGepäck">
+                                        <label class="form-check-label" for="CreateGepäck">Gepäck</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 mb-3">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="SearchFahrt">
+                                        <label class="form-check-label" for="SearchFahrt">An- oder Abfahrt</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 mb-3">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="SearchTiere">
+                                        <label class="form-check-label" for="SearchTiere">Tiere</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button class="btn btn-primary"> Übernehmen </button>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="container mt-3">
+                            <h2> Aktuelle Angebote </h2>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5 class="card-title">Abfahrt - 50769 - 16:45</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex">
+                                                <ul class="mr-3 w-50" >
+                                                    <li> Tag: Donnerstag </li>
+                                                    <li> Uhrzeit: 16:45 </li>
+                                                    <li> Typ: Abfahrt </li>
+                                                    <li> Raucher Auto: Nein </li>
+                                                    <li> Gepäck: Ja </li>
+                                                    <li> Tierfrei: Ja </li>
+                                                    <li> Kosten für die Fahrt: 1€</li>
+                                                </ul>
+
+                                                <div class="descriptionBox pl-3 w-50">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                                <button class="btn btn-secondary"> Teilnehmen </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5 class="card-title">Anfahrt - 50769 - 07:45</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex">
+                                                <ul class="mr-3 w-50" >
+                                                    <li> Tag: Dienstag </li>
+                                                    <li> Uhrzeit: 07:45 </li>
+                                                    <li> Typ: Anfahrt </li>
+                                                    <li> Raucher Auto: Ja </li>
+                                                    <li> Gepäck: Ja </li>
+                                                    <li> Tierfrei: Nein </li>
+                                                    <li> Kosten für die Fahrt: 5€</li>
+                                                </ul>
+
+                                                <div class="descriptionBox pl-3 w-50">
+                                                    Hier würde dann eine völlig ausgibige Beschreibung stehen. Mit ganz viel wichtigen Infos, oder eben auch nicht.
+                                                </div>
+                                            </div>
+
+                                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                                <button class="btn btn-secondary"> Teilnehmen </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <form>
-
-            <div class="form-group"> </div>
-
-        </form>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 
 </body>
 
