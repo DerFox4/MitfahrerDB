@@ -12,7 +12,8 @@
       "tierfrei": false,
       "gepäck": true,
       "geschlecht": "both",
-      "description": "Hier würde dann eine völlig ausgiebige Beschreibung stehen. Mit ganz viel wichtigen Infos, oder eben auch nicht."
+      "description": "Hier würde dann eine völlig ausgiebige Beschreibung stehen. Mit ganz viel wichtigen Infos, oder eben auch nicht.",
+      "tourId": "1"
     }, {
       "anbieter": "Mike Schmitz",
       "ziel_PLZ": 32523,
@@ -27,8 +28,9 @@
       "tierfrei": false,
       "gepäck": false,
       "geschlecht": "both",
-      "description": ""
-    }, {
+      "description": "",
+      "tourId": "2"
+}, {
       "anbieter": "Benno Stahl",
       "ziel_PLZ": 50769,
       "start_PLZ": 43667,
@@ -42,8 +44,9 @@
       "tierfrei": false,
       "gepäck": true,
       "geschlecht": "both",
-      "description": "Aufgrund meines Hundes riecht es im Auto nach nassem Hund. Obwohl dieser oft nass im Auto sitzt, sind die Sitze dank der Sitzheizung trocken."
-    }, {
+      "description": "Aufgrund meines Hundes riecht es im Auto nach nassem Hund. Obwohl dieser oft nass im Auto sitzt, sind die Sitze dank der Sitzheizung trocken.",
+      "tourId": "3"
+}, {
     "anbieter": "Carsten Meier",
     "ziel_PLZ": 50769,
     "start_PLZ": 32523,
@@ -57,8 +60,9 @@
     "tierfrei": false,
     "gepäck": false,
     "geschlecht": "both",
-    "description": "Auto ist ein Audi TT, Baujahr 98. Hat keinen TüV mehr, hat keinen Unterboden mehr, hat mehr PS als im Fahrzeugbrief vermerkt. ... wir sollten lebend ankommen."
-  }, {
+    "description": "Auto ist ein Audi TT, Baujahr 98. Hat keinen TüV mehr, hat keinen Unterboden mehr, hat mehr PS als im Fahrzeugbrief vermerkt. ... wir sollten lebend ankommen.",
+    "tourId": "4"
+}, {
     "anbieter": "Thorsten Schneider",
     "ziel_PLZ": 50765,
     "start_PLZ": 50769,
@@ -72,6 +76,7 @@
     "tierfrei": false,
     "gepäck": false,
     "geschlecht": "men",
-    "description": ""
-  }
+    "description": "",
+    "tourId": "5"
+}
 ]
