@@ -24,7 +24,7 @@
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="accordion-body">
-                        <form>
+                        <form action="/MirfahrerDB/src/index.html?" method="POST">
                             <div class="container">
 
                                 <div class="row">
@@ -216,7 +216,7 @@
 
                                 <div class="col-lg-6 col-sm-6 mb-3">
                                     <div class="form-floating">
-                                        <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
+                                        <textarea class="form-control" id="floatingTextarea2" maxlength="160"></textarea>
                                         <label for="floatingTextarea2">Beschreibung</label>
                                     </div>
                                 </div>
@@ -234,7 +234,7 @@
 
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button id="Search" class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         Fahrt suchen
                     </button>
                 </h2>
@@ -372,17 +372,17 @@
                             </div>
 
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <button class="btn btn-primary"> Übernehmen </button>
+                                <button id="Filter" class="btn btn-primary"> Übernehmen </button>
                             </div>
                         </div>
 
                         <hr>
 
-                        <div class="container mt-3">
+                        <div class="container mt-3 mb-3">
                             <h2> Aktuelle Angebote </h2>
 
-                            <div class="row">
-                                <div class="col-lg-6">
+                            <div id="cardBlock" class="row">
+                                <div class="col-lg-6 mb-3">
                                     <div class="card">
                                         <div class="card-header">
                                             <h5 class="card-title">Abfahrt - 50769 - 16:45</h5>
@@ -390,7 +390,7 @@
                                         <div class="card-body">
                                             <div class="d-flex">
                                                 <ul class="mr-3 w-50" >
-                                                    <li> Tag: Donnerstag </li>
+                                                    <li> Tag: Donnerstag (19.11.20) </li>
                                                     <li> Uhrzeit: 16:45 </li>
                                                     <li> Typ: Abfahrt </li>
                                                     <li> Raucher Auto: Nein </li>
@@ -412,7 +412,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 mb-3">
                                     <div class="card">
                                         <div class="card-header">
                                             <h5 class="card-title">Anfahrt - 50769 - 07:45</h5>
@@ -420,7 +420,7 @@
                                         <div class="card-body">
                                             <div class="d-flex">
                                                 <ul class="mr-3 w-50" >
-                                                    <li> Tag: Dienstag </li>
+                                                    <li> Tag: Dienstag (24.11.20) </li>
                                                     <li> Uhrzeit: 07:45 </li>
                                                     <li> Typ: Anfahrt </li>
                                                     <li> Raucher Auto: Ja </li>
