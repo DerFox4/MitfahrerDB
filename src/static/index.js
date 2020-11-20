@@ -15,7 +15,6 @@ function initialisePage() {
             })
         } else if (e.srcElement.id == "Filter") {
             viewCardBlock(state.data)
-        } else if (e.srcElement.id === "SendAnything") {
         } else if (e.srcElement.id.includes("_JoinTour")) {
             const idName = e.srcElement.id
             const idNr = idName.slice(0,-9)
@@ -54,6 +53,8 @@ function loop(getState, updateState) {
     } else {
         filterContainer.className = "displayNone"
     }
+
+    console.log(getValuesFromForm())
 
     updateState({...state, clickEvents: []})
 }
@@ -140,6 +141,53 @@ function viewCard(dataInfo) {
             </div>
         `
     return newCard
+}
+
+function getValuesFromForm() {
+    const dayButtons = document.getElementsByName('CreateDay')
+    const day = dayButtons.forEach(x => {
+        if (x.checked) return(x.id)
+    })
+
+    const nrOfDrivers = document.getElementsByName('CreateNr')
+    const nrOfDriver = nrOfDrivers.forEach(x => {
+        if (x.checked) return(x.id)
+    })
+
+    const startPlz = document.getElementById('CreateStartPLZ').value
+    const destinationPlz = document.getElementById('CreateDestinationPLZ').value
+
+    const cost = document.getElementById('CreateCost').value
+
+    const time = (document.getElementById('CreateTime').value)
+
+    const isAnfahrt = document.getElementById('CreateFahrt').checked
+    const isSmoker = document.getElementById('RaucherAuto').checked
+    const withLuggage = document.getElementById('Gepäck').checked
+    const isAnimalFree = document.getElementById('CreateTiere').checked
+
+    const genders = document.getElementsByName('gender')
+    const gender = "Both"
+
+    const description = document.getElementById('description').value
+
+    const json =
+        {
+            "animal": isAnimalFree,
+            "arriveDrive": isAnfahrt,
+            "cost": cost,
+            "dateTime": "2020-11-19T00:18:00",
+            "destinationPlz": destinationPlz,
+            "discription": description,
+            "luggage": withLuggage,
+            "provider": 5,
+            "size": nrOfDriver,
+            "smoking": isSmoker,
+            "startPlz": startPlz,
+            "wishedPersonId": "FEMALE"
+        }
+
+    return JSON.stringify(json)
 }
 
 initialisePage()
